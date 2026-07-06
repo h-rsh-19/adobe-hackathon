@@ -2,8 +2,8 @@ import os
 import json
 from utils.extractor import extract_headings
 
-INPUT_PATH = "/app/input"
-OUTPUT_PATH = "/app/output"
+INPUT_PATH = os.getenv("INPUT_PATH", "input")
+OUTPUT_PATH = os.getenv("OUTPUT_PATH", "output")
 
 def main():
     os.makedirs(OUTPUT_PATH, exist_ok=True)
